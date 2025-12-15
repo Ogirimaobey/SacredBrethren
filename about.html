@@ -7,47 +7,105 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <style>body { font-family: 'Outfit', sans-serif; background-color: #050505; color: white; }</style>
+    <style>
+        body { font-family: 'Outfit', sans-serif; background-color: #050505; color: white; }
+        .glass-panel { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.05); }
+    </style>
 </head>
 <body class="pb-20 md:pb-0">
 
-    <div class="p-6 md:p-10 flex justify-between items-center">
-        <a href="index.html" class="font-bold text-lg"><i class="fa-solid fa-arrow-left mr-2"></i> BACK HOME</a>
-    </div>
+    <nav class="p-6 md:p-8 flex justify-between items-center sticky top-0 bg-black/80 backdrop-blur-md z-50 border-b border-white/10">
+        <a href="index.html" class="flex items-center gap-2 text-sm font-bold hover:text-gray-300 transition-colors">
+            <i class="fa-solid fa-arrow-left"></i> BACK HOME
+        </a>
+        <span class="font-bold tracking-widest text-lg hidden md:block">WHO WE ARE</span>
+        <div class="w-8"></div> </nav>
 
-    <section class="max-w-4xl mx-auto px-6 py-10">
-        <h1 class="text-5xl md:text-7xl font-black mb-6">OUR STORY.</h1>
-        <p class="text-xl md:text-2xl text-gray-300 leading-relaxed mb-10">
-            We are four friends, united by a single burden: to gather men to pray and call upon the name of the Lord. 
-            Started in 2022 in the city of <span class="text-white font-bold border-b border-white">Obangede, Kogi State</span>, 
-            Sacred Brethren is not just a meeting—it is a cry for revival.
+    <section class="max-w-5xl mx-auto px-6 py-16 text-center">
+        <p class="text-yellow-500 font-bold tracking-[0.3em] uppercase mb-4">Since 2022</p>
+        <h1 class="text-5xl md:text-7xl font-black mb-8 leading-tight">GATHERING MEN.<br>IGNITING FIRE.</h1>
+        <p class="text-xl md:text-2xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
+            We are four friends united by a single burden: to call upon the name of the Lord. 
+            Started in the city of <span class="text-white font-bold border-b-2 border-yellow-500">Obangede, Kogi State</span>, 
+            Sacred Brethren is not just a meeting—it is a cry for revival and a commitment to spiritual growth.
         </p>
+    </section>
 
-        <h2 class="text-3xl font-bold mb-8 text-yellow-500">THE PIONEERS</h2>
-        
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div class="bg-gray-900 p-6 rounded-xl text-center hover:bg-gray-800 transition-colors">
-                <div class="w-20 h-20 bg-gray-700 rounded-full mx-auto flex items-center justify-center text-2xl font-bold mb-4 border-2 border-gray-600">SO</div>
-                <h3 class="font-bold">Min. Success Okeji</h3>
-                <p class="text-xs text-gray-500 uppercase mt-1">Pioneer</p>
-            </div>
-            <div class="bg-gray-900 p-6 rounded-xl text-center hover:bg-gray-800 transition-colors">
-                <div class="w-20 h-20 bg-gray-700 rounded-full mx-auto flex items-center justify-center text-2xl font-bold mb-4 border-2 border-gray-600">JA</div>
-                <h3 class="font-bold">Min. Judah Ademola</h3>
-                <p class="text-xs text-gray-500 uppercase mt-1">Pioneer</p>
-            </div>
-            <div class="bg-gray-900 p-6 rounded-xl text-center hover:bg-gray-800 transition-colors">
-                <div class="w-20 h-20 bg-gray-700 rounded-full mx-auto flex items-center justify-center text-2xl font-bold mb-4 border-2 border-gray-600">EF</div>
-                <h3 class="font-bold">Min. Elijah Faith</h3>
-                <p class="text-xs text-gray-500 uppercase mt-1">Pioneer</p>
-            </div>
-            <div class="bg-gray-900 p-6 rounded-xl text-center hover:bg-gray-800 transition-colors">
-                <div class="w-20 h-20 bg-gray-700 rounded-full mx-auto flex items-center justify-center text-2xl font-bold mb-4 border-2 border-gray-600">OO</div>
-                <h3 class="font-bold">Min. Ogirima Obey</h3>
-                <p class="text-xs text-gray-500 uppercase mt-1">Pioneer</p>
+    <section class="bg-[#0f0f0f] py-20 border-t border-white/5">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 text-center flex items-center justify-center gap-4">
+                <span class="h-px w-10 bg-gray-700"></span> THE PIONEERS <span class="h-px w-10 bg-gray-700"></span>
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+                
+                <div class="glass-panel p-8 rounded-2xl flex items-center gap-6 hover:bg-white/5 transition-colors group border-l-4 border-transparent hover:border-blue-500">
+                    <div class="w-24 h-24 bg-gray-800 rounded-full flex items-center justify-center text-3xl font-bold border-2 border-gray-600 group-hover:border-white transition-colors text-gray-400 group-hover:text-white">SO</div>
+                    <div>
+                        <h3 class="text-2xl font-bold mb-1">Min. Success Okeji</h3>
+                        <p class="text-blue-500 text-xs font-bold uppercase tracking-widest mb-2">Pioneer</p>
+                        <p class="text-gray-500 text-sm">"Dedicated to the teaching of the word and prayer."</p>
+                    </div>
+                </div>
+
+                <div class="glass-panel p-8 rounded-2xl flex items-center gap-6 hover:bg-white/5 transition-colors group border-l-4 border-transparent hover:border-yellow-500">
+                    <div class="w-24 h-24 bg-gray-800 rounded-full flex items-center justify-center text-3xl font-bold border-2 border-gray-600 group-hover:border-white transition-colors text-gray-400 group-hover:text-white">JA</div>
+                    <div>
+                        <h3 class="text-2xl font-bold mb-1">Min. Judah Ademola</h3>
+                        <p class="text-yellow-500 text-xs font-bold uppercase tracking-widest mb-2">Pioneer</p>
+                        <p class="text-gray-500 text-sm">"Leading men into the depths of worship and truth."</p>
+                    </div>
+                </div>
+
+                <div class="glass-panel p-8 rounded-2xl flex items-center gap-6 hover:bg-white/5 transition-colors group border-l-4 border-transparent hover:border-red-500">
+                    <div class="w-24 h-24 bg-gray-800 rounded-full flex items-center justify-center text-3xl font-bold border-2 border-gray-600 group-hover:border-white transition-colors text-gray-400 group-hover:text-white">EF</div>
+                    <div>
+                        <h3 class="text-2xl font-bold mb-1">Min. Elijah Faith</h3>
+                        <p class="text-red-500 text-xs font-bold uppercase tracking-widest mb-2">Pioneer</p>
+                        <p class="text-gray-500 text-sm">"Passionate about intercession and the move of the Spirit."</p>
+                    </div>
+                </div>
+
+                <div class="glass-panel p-8 rounded-2xl flex items-center gap-6 hover:bg-white/5 transition-colors group border-l-4 border-transparent hover:border-green-500">
+                    <div class="w-24 h-24 bg-gray-800 rounded-full flex items-center justify-center text-3xl font-bold border-2 border-gray-600 group-hover:border-white transition-colors text-gray-400 group-hover:text-white">OO</div>
+                    <div>
+                        <h3 class="text-2xl font-bold mb-1">Min. Ogirima Obey</h3>
+                        <p class="text-green-500 text-xs font-bold uppercase tracking-widest mb-2">Pioneer</p>
+                        <p class="text-gray-500 text-sm">"Building systems for the gospel and raising disciples."</p>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
+
+    <section class="py-20 px-6 max-w-7xl mx-auto">
+        <h2 class="text-3xl font-bold mb-12 text-center">OUR CORE VALUES</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            <div class="p-6">
+                <i class="fa-solid fa-fire text-4xl text-yellow-500 mb-4"></i>
+                <h3 class="font-bold text-xl mb-2">Fire</h3>
+                <p class="text-gray-400 text-sm">We believe in the fervent, unquenchable fire of the Holy Spirit in prayer.</p>
+            </div>
+            <div class="p-6">
+                <i class="fa-solid fa-book-bible text-4xl text-blue-500 mb-4"></i>
+                <h3 class="font-bold text-xl mb-2">Truth</h3>
+                <p class="text-gray-400 text-sm">We are grounded in the undiluted Word of God as our final authority.</p>
+            </div>
+            <div class="p-6">
+                <i class="fa-solid fa-heart text-4xl text-red-500 mb-4"></i>
+                <h3 class="font-bold text-xl mb-2">Love</h3>
+                <p class="text-gray-400 text-sm">We are a brotherhood bound by love, unity, and mutual support.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="md:hidden fixed bottom-0 w-full bg-[#0a0a0a] border-t border-white/10 z-50 px-6 py-3 flex justify-between items-center text-[10px] font-medium text-gray-500">
+        <a href="index.html" class="flex flex-col items-center gap-1 hover:text-white"><i class="fa-solid fa-house text-lg"></i>Home</a>
+        <a href="media.html" class="flex flex-col items-center gap-1 hover:text-white"><i class="fa-solid fa-play-circle text-lg"></i>Media</a>
+        <a href="give.html" class="flex flex-col items-center gap-1 hover:text-white"><i class="fa-solid fa-heart text-lg"></i>Give</a>
+        <a href="about.html" class="flex flex-col items-center gap-1 text-white"><i class="fa-solid fa-users text-lg"></i>About</a>
+    </div>
 
 </body>
 </html>
