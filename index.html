@@ -10,205 +10,206 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Outfit', sans-serif; background-color: #050505; color: white; }
-        .glass { background: rgba(20, 20, 20, 0.8); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
-        .glass-card { background: rgba(30, 30, 30, 0.4); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        body { font-family: 'Outfit', sans-serif; background-color: #f8fafc; color: #1e293b; }
+        .wine-bg { background-color: #800020; }
+        .wine-text { color: #800020; }
+        .glass-nav { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(0,0,0,0.05); }
+        .clean-card { background: white; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); }
     </style>
 </head>
 <body class="antialiased pb-20 md:pb-0">
 
-    <nav class="fixed w-full z-50 top-0 glass hidden md:block">
+    <nav class="fixed w-full z-50 top-0 glass-nav hidden md:block transition-all">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <a href="index.html" class="flex items-center gap-3 font-bold tracking-widest text-lg">
-                <div class="w-8 h-8 bg-white text-black flex items-center justify-center rounded-sm">S</div>SACRED BRETHREN
+            <a href="index.html" class="flex items-center gap-3 font-bold tracking-widest text-lg text-slate-900">
+                <div class="w-8 h-8 wine-bg text-white flex items-center justify-center rounded-sm">S</div>SACRED BRETHREN
             </a>
-            <div class="flex gap-10 text-sm font-semibold text-gray-300">
-                <a href="about.html" class="hover:text-white transition-colors">ABOUT</a>
-                <a href="media.html" class="hover:text-white transition-colors">MEDIA</a>
-                <a href="visit.html" class="hover:text-white transition-colors">VISIT</a>
-                <a href="give.html" class="hover:text-white transition-colors">GIVE</a>
+            <div class="flex gap-10 text-sm font-bold text-slate-500">
+                <a href="about.html" class="hover:wine-text transition-colors">ABOUT</a>
+                <a href="media.html" class="hover:wine-text transition-colors">MEDIA</a>
+                <a href="visit.html" class="hover:wine-text transition-colors">VISIT</a>
+                <a href="give.html" class="hover:wine-text transition-colors">GIVE</a>
             </div>
-            <a href="https://t.me/+YpHY9WcalDwwMTY0" target="_blank" class="flex items-center gap-2 bg-red-600 hover:bg-red-700 px-5 py-2 rounded-full transition-all text-xs font-bold uppercase">
+            <a href="https://t.me/+YpHY9WcalDwwMTY0" target="_blank" class="flex items-center gap-2 wine-bg text-white hover:bg-red-900 px-6 py-2.5 rounded-full transition-all text-xs font-bold uppercase shadow-lg shadow-red-900/20">
                 <i class="fa-brands fa-telegram"></i> Join Channel
             </a>
         </div>
     </nav>
 
-    <nav class="md:hidden fixed top-0 w-full z-50 p-5 flex justify-between items-center glass">
-        <span class="font-bold tracking-widest text-lg">SACRED BRETHREN</span>
-        <a href="visit.html" class="text-white bg-white/10 px-3 py-1 rounded text-xs">VISIT</a>
+    <nav class="md:hidden fixed top-0 w-full z-50 p-4 flex justify-between items-center glass-nav shadow-sm">
+        <span class="font-bold tracking-widest text-lg wine-text">SACRED BRETHREN</span>
+        <a href="visit.html" class="wine-bg text-white px-4 py-1.5 rounded-full text-xs font-bold shadow-md">VISIT</a>
     </nav>
 
-    <header class="relative w-full min-h-screen flex items-center justify-center pt-20 md:pt-0">
-        <img src="https://images.unsplash.com/photo-1438232992991-995b7058bbb3?q=80&w=2673&fit=crop" class="absolute inset-0 w-full h-full object-cover opacity-50" alt="Background">
-        <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-black/50 to-black/60"></div>
+    <header class="relative w-full min-h-screen flex items-center justify-center pt-20 md:pt-0 overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1438232992991-995b7058bbb3?q=80&w=2673&fit=crop" class="absolute inset-0 w-full h-full object-cover" alt="Background">
+        <div class="absolute inset-0 bg-gradient-to-t from-[#800020] via-[#800020]/80 to-[#4a0416]/70 mix-blend-multiply"></div>
+        <div class="absolute inset-0 bg-black/20"></div>
 
-        <div class="relative z-10 text-center px-4 max-w-4xl mt-10 md:mt-0">
-            <p class="text-yellow-500 tracking-[0.2em] text-xs md:text-sm font-bold mb-4 uppercase">Est. 2022 • Obangede, Nigeria</p>
-            <h1 class="text-5xl md:text-8xl font-black tracking-tighter mb-6 leading-none">
-                WE DECIDE TO<br>LIVE FOR <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500">GOD.</span>
+        <div class="relative z-10 text-center px-4 max-w-4xl mt-10 md:mt-0 text-white">
+            <p class="text-yellow-400 tracking-[0.2em] text-xs md:text-sm font-bold mb-4 uppercase">Est. 2022 • Obangede, Nigeria</p>
+            <h1 class="text-5xl md:text-8xl font-black tracking-tighter mb-6 leading-none shadow-black drop-shadow-lg">
+                WE DECIDE TO<br>LIVE FOR <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-300">GOD.</span>
             </h1>
             
             <div class="flex flex-col md:flex-row gap-4 justify-center items-center mt-8 w-full">
-                <a href="visit.html" class="w-full md:w-auto px-8 py-4 bg-white text-black font-bold tracking-wide hover:bg-gray-200 text-center rounded-sm">
+                <a href="visit.html" class="w-full md:w-auto px-8 py-4 bg-white wine-text font-bold tracking-wide hover:bg-gray-100 text-center rounded shadow-xl">
                     PLAN A VISIT
                 </a>
-                <a href="https://t.me/+YpHY9WcalDwwMTY0" target="_blank" class="w-full md:w-auto px-8 py-4 border border-white/30 text-white font-bold tracking-wide hover:bg-white/10 backdrop-blur-sm flex items-center gap-2 justify-center text-center rounded-sm">
+                <a href="https://t.me/+YpHY9WcalDwwMTY0" target="_blank" class="w-full md:w-auto px-8 py-4 border border-white/50 text-white font-bold tracking-wide hover:bg-white/10 backdrop-blur-sm flex items-center gap-2 justify-center text-center rounded">
                     <i class="fa-solid fa-headphones"></i> LISTEN TO SERMONS
                 </a>
             </div>
         </div>
     </header>
 
-    <section class="py-10 px-4 md:px-10 max-w-7xl mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+    <section class="py-16 px-4 md:px-10 max-w-7xl mx-auto -mt-20 relative z-20">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             
-            <a href="https://chat.whatsapp.com/CVqW8Wygq22CVToslouSLd?mode=hqrc" target="_blank" class="glass-card md:col-span-2 rounded-2xl p-8 relative overflow-hidden group hover:bg-white/5 transition-all">
-                <div class="absolute top-0 right-0 p-4 opacity-20 group-hover:opacity-50 transition-opacity">
-                    <i class="fa-brands fa-whatsapp text-6xl"></i>
+            <a href="https://chat.whatsapp.com/CVqW8Wygq22CVToslouSLd?mode=hqrc" target="_blank" class="clean-card md:col-span-2 rounded-2xl p-8 relative overflow-hidden group hover:shadow-xl transition-all bg-white">
+                <div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
+                    <i class="fa-brands fa-whatsapp text-8xl text-green-600"></i>
                 </div>
-                <h3 class="text-2xl font-bold mb-2">New to Sacred Brethren?</h3>
-                <p class="text-gray-300 mb-4 text-sm">Join our WhatsApp community. We are a family of friends gathering to pray.</p>
-                <span class="text-green-400 font-bold text-sm tracking-widest uppercase flex items-center gap-2">
+                <h3 class="text-3xl font-bold mb-2 text-slate-800">New to Sacred Brethren?</h3>
+                <p class="text-slate-500 mb-6 text-sm max-w-md">Join our WhatsApp community. We are a family of friends gathering to pray and seek God's face.</p>
+                <span class="wine-text font-bold text-sm tracking-widest uppercase flex items-center gap-2">
                     Connect Now <i class="fa-solid fa-arrow-right"></i>
                 </span>
             </a>
 
-            <div class="glass-card rounded-2xl p-8 flex flex-col justify-center items-center text-center border-t-4 border-white relative overflow-hidden group">
-                <div class="bg-red-600 text-white text-[10px] font-bold px-2 py-1 rounded mb-2 flex items-center gap-2 animate-pulse">
-                    <span class="w-2 h-2 bg-white rounded-full"></span> VIRTUAL MEETING
+            <div class="bg-[#800020] text-white rounded-2xl p-8 flex flex-col justify-center items-center text-center shadow-xl relative overflow-hidden group">
+                <div class="absolute -top-10 -right-10 w-32 h-32 bg-white/10 rounded-full"></div>
+                
+                <div class="bg-white/20 backdrop-blur-md text-white text-[10px] font-bold px-3 py-1 rounded-full mb-3 flex items-center gap-2 animate-pulse">
+                    <span class="w-2 h-2 bg-red-400 rounded-full"></span> VIRTUAL MEETING
                 </div>
                 
                 <h4 class="text-3xl font-black mb-1">SATURDAY</h4>
-                <p class="text-lg text-gray-400 font-light">8:00 PM</p>
-                <p class="text-xs text-gray-500 mt-2 mb-4"><i class="fa-solid fa-globe mr-1"></i> Online / Telegram</p>
+                <p class="text-lg text-white/80 font-light">8:00 PM</p>
+                <p class="text-xs text-white/60 mt-2 mb-6"><i class="fa-solid fa-globe mr-1"></i> Online / Telegram</p>
                 
-                <a href="https://t.me/+YpHY9WcalDwwMTY0" target="_blank" class="text-[10px] font-bold border border-gray-600 px-4 py-2 rounded-full hover:bg-white hover:text-black transition-colors uppercase">
+                <a href="https://t.me/+YpHY9WcalDwwMTY0" target="_blank" class="w-full bg-white wine-text text-xs font-bold py-3 rounded hover:bg-gray-100 transition-colors uppercase">
                     JOIN ONLINE LINK
                 </a>
             </div>
 
-            <a href="prayer.html" class="glass-card rounded-2xl p-8 flex flex-col justify-between hover:bg-white/5 transition-colors border-l-4 border-yellow-500 md:col-span-1">
+            <a href="prayer.html" class="clean-card rounded-2xl p-8 flex flex-col justify-between hover:border-[#800020] transition-colors border-l-4 border-l-[#800020] md:col-span-1 bg-white">
                 <div class="flex justify-between items-start mb-4">
-                    <i class="fa-solid fa-hands-praying text-3xl text-yellow-500"></i>
+                    <div class="w-12 h-12 rounded-full wine-bg/10 flex items-center justify-center text-[#800020]">
+                        <i class="fa-solid fa-hands-praying text-xl"></i>
+                    </div>
                 </div>
                 <div>
-                    <h4 class="text-xl font-bold">Need Prayer?</h4>
-                    <p class="text-xs text-gray-400 mt-1">Submit your request. We will agree with you in faith.</p>
+                    <h4 class="text-xl font-bold text-slate-800">Need Prayer?</h4>
+                    <p class="text-xs text-slate-500 mt-1">Submit your request. We will agree with you in faith.</p>
                 </div>
             </a>
             
-            <div class="md:col-span-2 glass-card rounded-2xl p-6">
-                <h3 class="text-lg font-bold mb-4 border-b border-white/10 pb-2">Latest Sermons</h3>
+            <div class="md:col-span-2 clean-card rounded-2xl p-6 bg-white">
+                <h3 class="text-lg font-bold mb-4 border-b border-slate-100 pb-2 text-slate-800">Latest Sermons</h3>
                 
                 <div class="space-y-3">
-                    <a href="https://t.me/c/1630527285/330" target="_blank" class="flex items-center gap-4 p-3 hover:bg-white/5 rounded-lg transition-colors group">
-                        <div class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center group-hover:bg-white group-hover:text-black transition-colors">
+                    <a href="https://t.me/c/1630527285/330" target="_blank" class="flex items-center gap-4 p-3 hover:bg-slate-50 rounded-lg transition-colors group border border-transparent hover:border-slate-100">
+                        <div class="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center group-hover:wine-bg group-hover:text-white transition-colors text-slate-400">
                             <i class="fa-solid fa-play"></i>
                         </div>
                         <div>
-                            <h4 class="font-bold text-sm">Death & Glory</h4>
-                            <p class="text-xs text-gray-400">Min. Judah Ademola • Believers Conf. 2025</p>
+                            <h4 class="font-bold text-sm text-slate-800">Death & Glory</h4>
+                            <p class="text-xs text-slate-500">Min. Judah Ademola • Believers Conf. 2025</p>
                         </div>
                     </a>
-                    <a href="https://t.me/c/1630527285/331" target="_blank" class="flex items-center gap-4 p-3 hover:bg-white/5 rounded-lg transition-colors group">
-                        <div class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center group-hover:bg-white group-hover:text-black transition-colors">
+                    <a href="https://t.me/c/1630527285/331" target="_blank" class="flex items-center gap-4 p-3 hover:bg-slate-50 rounded-lg transition-colors group border border-transparent hover:border-slate-100">
+                        <div class="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center group-hover:wine-bg group-hover:text-white transition-colors text-slate-400">
                             <i class="fa-solid fa-play"></i>
                         </div>
                         <div>
-                            <h4 class="font-bold text-sm">The Horeb Experience</h4>
-                            <p class="text-xs text-gray-400">Min. Ogirima Obey</p>
+                            <h4 class="font-bold text-sm text-slate-800">The Horeb Experience</h4>
+                            <p class="text-xs text-slate-500">Min. Ogirima Obey</p>
                         </div>
                     </a>
                 </div>
                 
-                <div class="mt-4 pt-4 border-t border-white/10 text-center">
-                    <a href="media.html" class="text-xs font-bold text-gray-400 hover:text-white">VIEW ALL SERMONS IN MEDIA LIBRARY</a>
+                <div class="mt-4 pt-4 border-t border-slate-100 text-center">
+                    <a href="media.html" class="text-xs font-bold wine-text hover:text-red-900">VIEW ALL SERMONS IN MEDIA LIBRARY</a>
                 </div>
             </div>
 
         </div>
     </section>
 
-    <section class="py-20 bg-[#0a0a0a] border-t border-white/5">
+    <section class="py-20 wine-bg text-white">
         <div class="max-w-7xl mx-auto px-6">
             <div class="mb-12">
-                <p class="text-yellow-500 font-bold uppercase tracking-widest text-xs mb-2">Beyond the walls</p>
-                <h2 class="text-4xl md:text-5xl font-black">LOVE IN ACTION.</h2>
-                <p class="text-gray-400 mt-4 max-w-xl">We don't just gather to pray; we go out to love. Sacred Brethren is committed to impacting our cities.</p>
+                <p class="text-yellow-400 font-bold uppercase tracking-widest text-xs mb-2">Beyond the walls</p>
+                <h2 class="text-4xl md:text-5xl font-black text-white">LOVE IN ACTION.</h2>
+                <p class="text-white/70 mt-4 max-w-xl">We don't just gather to pray; we go out to love. Sacred Brethren is committed to impacting our cities.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 
-                <div class="group relative h-[400px] rounded-2xl overflow-hidden cursor-pointer">
-                    <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=2070&fit=crop" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+                <div class="group relative h-[400px] rounded-2xl overflow-hidden cursor-pointer bg-black/20 border border-white/10">
+                    <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=2070&fit=crop" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-80 group-hover:opacity-60">
                     <div class="absolute bottom-0 left-0 p-8">
                         <h3 class="text-2xl font-bold mb-2">Children's Outreach</h3>
-                        <p class="text-gray-300 text-xs mb-4 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+                        <p class="text-white/80 text-xs mb-4 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
                             Catching them young for Christ through street events and teaching sessions.
                         </p>
-                        <span class="inline-block border border-white/30 px-3 py-1 rounded-full text-[10px] font-bold uppercase backdrop-blur-sm group-hover:bg-white group-hover:text-black transition-colors">Impact</span>
                     </div>
                 </div>
 
-                <div class="group relative h-[400px] rounded-2xl overflow-hidden cursor-pointer">
-                    <img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?q=80&w=2070&fit=crop" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+                <div class="group relative h-[400px] rounded-2xl overflow-hidden cursor-pointer bg-black/20 border border-white/10">
+                    <img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?q=80&w=2070&fit=crop" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-80 group-hover:opacity-60">
                     <div class="absolute bottom-0 left-0 p-8">
                         <h3 class="text-2xl font-bold mb-2">Community Support</h3>
-                        <p class="text-gray-300 text-xs mb-4 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+                        <p class="text-white/80 text-xs mb-4 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
                             Extending a hand of hope through welfare and community prayers.
                         </p>
-                        <span class="inline-block border border-white/30 px-3 py-1 rounded-full text-[10px] font-bold uppercase backdrop-blur-sm group-hover:bg-white group-hover:text-black transition-colors">Mission</span>
                     </div>
                 </div>
 
-                <div class="group relative h-[400px] rounded-2xl overflow-hidden cursor-pointer border-2 border-yellow-500/20">
-                    <img src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?q=80&w=2070&fit=crop" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 filter saturate-150">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+                <div class="group relative h-[400px] rounded-2xl overflow-hidden cursor-pointer bg-black/20 border-2 border-yellow-500/50">
+                    <img src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?q=80&w=2070&fit=crop" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-80 group-hover:opacity-60">
                     <div class="absolute top-4 right-4 bg-yellow-500 text-black text-[10px] font-bold px-2 py-1 rounded">EVANGELISM</div>
                     <div class="absolute bottom-0 left-0 p-8">
                         <h3 class="text-2xl font-bold mb-2">Let's Go A Fishing</h3>
-                        <p class="text-gray-300 text-xs mb-4 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+                        <p class="text-white/80 text-xs mb-4 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
                             A massive soul-winning expedition to populate the Kingdom of God.
                         </p>
-                        <span class="inline-block bg-yellow-500 text-black px-3 py-1 rounded-full text-[10px] font-bold uppercase group-hover:bg-white transition-colors">Harvest</span>
                     </div>
                 </div>
 
             </div>
             
-            <div class="mt-20 border-t border-white/10 pt-10">
+            <div class="mt-20 border-t border-white/20 pt-10">
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center mb-10">
                     <div>
-                        <h4 class="text-4xl font-black text-gray-200">2022</h4>
-                        <p class="text-xs text-gray-500 uppercase mt-2">Year Established</p>
+                        <h4 class="text-4xl font-black text-white">2022</h4>
+                        <p class="text-xs text-white/60 uppercase mt-2">Year Established</p>
                     </div>
                     <div>
-                        <h4 class="text-4xl font-black text-gray-200">1000+</h4>
-                        <p class="text-xs text-gray-500 uppercase mt-2">Lives Touched</p>
+                        <h4 class="text-4xl font-black text-white">1000+</h4>
+                        <p class="text-xs text-white/60 uppercase mt-2">Lives Touched</p>
                     </div>
                     <div>
-                        <h4 class="text-4xl font-black text-gray-200">20+</h4>
-                        <p class="text-xs text-gray-500 uppercase mt-2">Programs Held</p>
+                        <h4 class="text-4xl font-black text-white">20+</h4>
+                        <p class="text-xs text-white/60 uppercase mt-2">Programs Held</p>
                     </div>
                     <div>
-                        <h4 class="text-4xl font-black text-gray-200">Infinite</h4>
-                        <p class="text-xs text-gray-500 uppercase mt-2">God's Grace</p>
+                        <h4 class="text-4xl font-black text-white">Infinite</h4>
+                        <p class="text-xs text-white/60 uppercase mt-2">God's Grace</p>
                     </div>
                 </div>
 
-                <div class="flex flex-col md:flex-row justify-center items-center gap-6 bg-white/5 p-6 rounded-xl border border-white/5">
-                    <span class="text-sm font-bold uppercase tracking-widest text-gray-400">Operating In:</span>
+                <div class="flex flex-col md:flex-row justify-center items-center gap-6 bg-black/20 p-6 rounded-xl border border-white/10">
+                    <span class="text-sm font-bold uppercase tracking-widest text-white/60">Operating In:</span>
                     <div class="flex flex-wrap justify-center gap-4">
-                        <span class="px-6 py-2 rounded-full border border-green-500/50 text-green-400 font-bold bg-green-500/10 flex items-center gap-2">
+                        <span class="px-6 py-2 rounded-full border border-white/30 text-white font-bold bg-white/10 flex items-center gap-2">
                             <i class="fa-solid fa-location-dot"></i> KOGI STATE
                         </span>
-                        <span class="px-6 py-2 rounded-full border border-white/30 text-white font-bold bg-white/5 flex items-center gap-2">
+                        <span class="px-6 py-2 rounded-full border border-white/30 text-white font-bold bg-white/10 flex items-center gap-2">
                             <i class="fa-solid fa-city"></i> ABUJA
                         </span>
-                        <span class="px-6 py-2 rounded-full border border-blue-500/50 text-blue-400 font-bold bg-blue-500/10 flex items-center gap-2">
+                        <span class="px-6 py-2 rounded-full border border-white/30 text-white font-bold bg-white/10 flex items-center gap-2">
                             <i class="fa-solid fa-water"></i> LAGOS STATE
                         </span>
                     </div>
@@ -218,13 +219,13 @@
         </div>
     </section>
 
-    <footer class="bg-black py-10 px-6 border-t border-white/10 mb-16 md:mb-0">
+    <footer class="bg-[#1a1a1a] text-white py-12 px-6 mb-16 md:mb-0">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-8">
             <div>
-                <h3 class="font-bold text-xl mb-4">SACRED BRETHREN</h3>
-                <p class="text-gray-400 text-sm mb-2"><i class="fa-solid fa-phone mr-2"></i> 09167352060</p>
-                <p class="text-gray-400 text-sm mb-2"><i class="fa-solid fa-envelope mr-2"></i> sacredbrethren@gmail.com</p>
-                <a href="https://web.facebook.com/profile.php?id=100082493232898&sk=about" target="_blank" class="text-blue-500 hover:text-blue-400 text-sm">
+                <h3 class="font-bold text-xl mb-4 text-white">SACRED BRETHREN</h3>
+                <p class="text-gray-400 text-sm mb-2"><i class="fa-solid fa-phone mr-2 text-[#800020]"></i> 09167352060</p>
+                <p class="text-gray-400 text-sm mb-2"><i class="fa-solid fa-envelope mr-2 text-[#800020]"></i> sacredbrethren@gmail.com</p>
+                <a href="https://web.facebook.com/profile.php?id=100082493232898&sk=about" target="_blank" class="text-blue-400 hover:text-white text-sm">
                     <i class="fa-brands fa-facebook mr-1"></i> Follow us on Facebook
                 </a>
             </div>
@@ -234,11 +235,11 @@
         </div>
     </footer>
 
-    <div class="md:hidden fixed bottom-0 w-full bg-[#0a0a0a] border-t border-white/10 z-50 px-6 py-3 flex justify-between items-center text-[10px] font-medium text-gray-500">
-        <a href="index.html" class="flex flex-col items-center gap-1 text-white"><i class="fa-solid fa-house text-lg"></i>Home</a>
-        <a href="media.html" class="flex flex-col items-center gap-1 hover:text-white"><i class="fa-solid fa-play-circle text-lg"></i>Media</a>
-        <a href="give.html" class="flex flex-col items-center gap-1 hover:text-white"><i class="fa-solid fa-heart text-lg"></i>Give</a>
-        <a href="about.html" class="flex flex-col items-center gap-1 hover:text-white"><i class="fa-solid fa-users text-lg"></i>About</a>
+    <div class="md:hidden fixed bottom-0 w-full bg-white border-t border-gray-200 z-50 px-6 py-3 flex justify-between items-center text-[10px] font-bold text-gray-400 shadow-[0_-5px_15px_rgba(0,0,0,0.05)]">
+        <a href="index.html" class="flex flex-col items-center gap-1 wine-text"><i class="fa-solid fa-house text-lg"></i>Home</a>
+        <a href="media.html" class="flex flex-col items-center gap-1 hover:wine-text"><i class="fa-solid fa-play-circle text-lg"></i>Media</a>
+        <a href="give.html" class="flex flex-col items-center gap-1 hover:wine-text"><i class="fa-solid fa-heart text-lg"></i>Give</a>
+        <a href="about.html" class="flex flex-col items-center gap-1 hover:wine-text"><i class="fa-solid fa-users text-lg"></i>About</a>
     </div>
 
 </body>
