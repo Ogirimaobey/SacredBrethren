@@ -6,24 +6,24 @@
     <title>Prayer Request</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <style>body { font-family: 'Outfit', sans-serif; background-color: #050505; color: white; }</style>
+    <style>body { font-family: 'Outfit', sans-serif; background-color: #f8fafc; color: #1e293b; }</style>
 </head>
 <body>
     <div class="max-w-2xl mx-auto px-6 py-10">
-        <a href="index.html" class="text-sm text-gray-500 mb-10 block">&larr; Back to Home</a>
+        <a href="index.html" class="text-sm text-gray-500 mb-10 block hover:text-[#800020] font-bold">&larr; Back to Home</a>
         
-        <h1 class="text-4xl font-bold mb-2">How can we pray for you?</h1>
-        <p class="text-gray-400 mb-8">"For where two or three are gathered in my name, there am I among them."</p>
+        <h1 class="text-4xl font-bold mb-2 text-slate-900">How can we pray for you?</h1>
+        <p class="text-slate-500 mb-8">"For where two or three are gathered in my name, there am I among them."</p>
 
         <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" class="space-y-6">
             <div>
-                <label class="block text-sm font-bold mb-2">Your Name</label>
-                <input type="text" name="name" class="w-full bg-gray-900 border border-gray-700 p-4 rounded-lg focus:outline-none focus:border-white transition-colors" placeholder="John Doe" required>
+                <label class="block text-sm font-bold mb-2 text-slate-700">Your Name</label>
+                <input type="text" name="name" class="w-full bg-white border border-gray-300 p-4 rounded focus:outline-none focus:border-[#800020] transition-colors" placeholder="John Doe" required>
             </div>
             
             <div>
-                <label class="block text-sm font-bold mb-2">Prayer Topic</label>
-                <select name="topic" class="w-full bg-gray-900 border border-gray-700 p-4 rounded-lg focus:outline-none focus:border-white">
+                <label class="block text-sm font-bold mb-2 text-slate-700">Prayer Topic</label>
+                <select name="topic" class="w-full bg-white border border-gray-300 p-4 rounded focus:outline-none focus:border-[#800020]">
                     <option>General Prayer</option>
                     <option>Healing</option>
                     <option>Salvation</option>
@@ -33,11 +33,11 @@
             </div>
 
             <div>
-                <label class="block text-sm font-bold mb-2">The Request</label>
-                <textarea name="message" rows="5" class="w-full bg-gray-900 border border-gray-700 p-4 rounded-lg focus:outline-none focus:border-white" placeholder="Type your prayer request here..." required></textarea>
+                <label class="block text-sm font-bold mb-2 text-slate-700">The Request</label>
+                <textarea name="message" rows="5" class="w-full bg-white border border-gray-300 p-4 rounded focus:outline-none focus:border-[#800020]" placeholder="Type your prayer request here..." required></textarea>
             </div>
 
-            <button type="submit" class="w-full bg-yellow-500 text-black font-bold py-4 rounded-lg hover:bg-yellow-400 transition-colors">
+            <button type="submit" class="w-full bg-[#800020] text-white font-bold py-4 rounded hover:bg-red-900 transition-colors shadow-lg">
                 SEND PRAYER REQUEST
             </button>
         </form>
