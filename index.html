@@ -13,7 +13,6 @@
         body { font-family: 'Outfit', sans-serif; background-color: #050505; color: white; }
         .glass { background: rgba(20, 20, 20, 0.8); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
         .glass-card { background: rgba(30, 30, 30, 0.4); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
-        .text-outline { -webkit-text-stroke: 1px rgba(255,255,255,0.3); color: transparent; }
     </style>
 </head>
 <body class="antialiased pb-20 md:pb-0">
@@ -75,11 +74,18 @@
                 </span>
             </a>
 
-            <div class="glass-card rounded-2xl p-8 flex flex-col justify-center items-center text-center border-t-4 border-white">
-                <div class="bg-white text-black text-[10px] font-bold px-2 py-1 rounded mb-2">NEXT MEETING</div>
+            <div class="glass-card rounded-2xl p-8 flex flex-col justify-center items-center text-center border-t-4 border-white relative overflow-hidden group">
+                <div class="bg-red-600 text-white text-[10px] font-bold px-2 py-1 rounded mb-2 flex items-center gap-2 animate-pulse">
+                    <span class="w-2 h-2 bg-white rounded-full"></span> VIRTUAL MEETING
+                </div>
+                
                 <h4 class="text-3xl font-black mb-1">SATURDAY</h4>
                 <p class="text-lg text-gray-400 font-light">8:00 PM</p>
-                <p class="text-xs text-gray-500 mt-2">Civic Center, Obangede</p>
+                <p class="text-xs text-gray-500 mt-2 mb-4"><i class="fa-solid fa-globe mr-1"></i> Online / Telegram</p>
+                
+                <a href="https://t.me/+YpHY9WcalDwwMTY0" target="_blank" class="text-[10px] font-bold border border-gray-600 px-4 py-2 rounded-full hover:bg-white hover:text-black transition-colors uppercase">
+                    JOIN ONLINE LINK
+                </a>
             </div>
 
             <a href="prayer.html" class="glass-card rounded-2xl p-8 flex flex-col justify-between hover:bg-white/5 transition-colors border-l-4 border-yellow-500 md:col-span-1">
@@ -129,20 +135,20 @@
             <div class="mb-12">
                 <p class="text-yellow-500 font-bold uppercase tracking-widest text-xs mb-2">Beyond the walls</p>
                 <h2 class="text-4xl md:text-5xl font-black">LOVE IN ACTION.</h2>
-                <p class="text-gray-400 mt-4 max-w-xl">We don't just gather to pray; we go out to love. Sacred Brethren is committed to impacting Obangede and its environs.</p>
+                <p class="text-gray-400 mt-4 max-w-xl">We don't just gather to pray; we go out to love. Sacred Brethren is committed to impacting our cities.</p>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 
                 <div class="group relative h-[400px] rounded-2xl overflow-hidden cursor-pointer">
                     <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=2070&fit=crop" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                     <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
                     <div class="absolute bottom-0 left-0 p-8">
-                        <h3 class="text-3xl font-bold mb-2">Children's Outreach</h3>
-                        <p class="text-gray-300 text-sm mb-4 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
-                            Catching them young for Christ. We organize street events, teaching sessions, and fun moments to share the love of Jesus with the next generation.
+                        <h3 class="text-2xl font-bold mb-2">Children's Outreach</h3>
+                        <p class="text-gray-300 text-xs mb-4 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+                            Catching them young for Christ through street events and teaching sessions.
                         </p>
-                        <span class="inline-block border border-white/30 px-4 py-2 rounded-full text-xs font-bold uppercase backdrop-blur-sm group-hover:bg-white group-hover:text-black transition-colors">See the impact</span>
+                        <span class="inline-block border border-white/30 px-3 py-1 rounded-full text-[10px] font-bold uppercase backdrop-blur-sm group-hover:bg-white group-hover:text-black transition-colors">Impact</span>
                     </div>
                 </div>
 
@@ -150,32 +156,62 @@
                     <img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?q=80&w=2070&fit=crop" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                     <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
                     <div class="absolute bottom-0 left-0 p-8">
-                        <h3 class="text-3xl font-bold mb-2">Community Support</h3>
-                        <p class="text-gray-300 text-sm mb-4 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
-                            Extending a hand of hope. From welfare packages to community prayers, we are dedicated to being the salt of the earth in our immediate environment.
+                        <h3 class="text-2xl font-bold mb-2">Community Support</h3>
+                        <p class="text-gray-300 text-xs mb-4 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+                            Extending a hand of hope through welfare and community prayers.
                         </p>
-                        <span class="inline-block border border-white/30 px-4 py-2 rounded-full text-xs font-bold uppercase backdrop-blur-sm group-hover:bg-white group-hover:text-black transition-colors">Our Mission</span>
+                        <span class="inline-block border border-white/30 px-3 py-1 rounded-full text-[10px] font-bold uppercase backdrop-blur-sm group-hover:bg-white group-hover:text-black transition-colors">Mission</span>
+                    </div>
+                </div>
+
+                <div class="group relative h-[400px] rounded-2xl overflow-hidden cursor-pointer border-2 border-yellow-500/20">
+                    <img src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?q=80&w=2070&fit=crop" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 filter saturate-150">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+                    <div class="absolute top-4 right-4 bg-yellow-500 text-black text-[10px] font-bold px-2 py-1 rounded">EVANGELISM</div>
+                    <div class="absolute bottom-0 left-0 p-8">
+                        <h3 class="text-2xl font-bold mb-2">Let's Go A Fishing</h3>
+                        <p class="text-gray-300 text-xs mb-4 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+                            A massive soul-winning expedition to populate the Kingdom of God.
+                        </p>
+                        <span class="inline-block bg-yellow-500 text-black px-3 py-1 rounded-full text-[10px] font-bold uppercase group-hover:bg-white transition-colors">Harvest</span>
                     </div>
                 </div>
 
             </div>
             
-            <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-white/10 pt-10 text-center">
-                <div>
-                    <h4 class="text-4xl font-black text-gray-200">2022</h4>
-                    <p class="text-xs text-gray-500 uppercase mt-2">Year Established</p>
+            <div class="mt-20 border-t border-white/10 pt-10">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center mb-10">
+                    <div>
+                        <h4 class="text-4xl font-black text-gray-200">2022</h4>
+                        <p class="text-xs text-gray-500 uppercase mt-2">Year Established</p>
+                    </div>
+                    <div>
+                        <h4 class="text-4xl font-black text-gray-200">1000+</h4>
+                        <p class="text-xs text-gray-500 uppercase mt-2">Lives Touched</p>
+                    </div>
+                    <div>
+                        <h4 class="text-4xl font-black text-gray-200">20+</h4>
+                        <p class="text-xs text-gray-500 uppercase mt-2">Programs Held</p>
+                    </div>
+                    <div>
+                        <h4 class="text-4xl font-black text-gray-200">Infinite</h4>
+                        <p class="text-xs text-gray-500 uppercase mt-2">God's Grace</p>
+                    </div>
                 </div>
-                <div>
-                    <h4 class="text-4xl font-black text-gray-200">50+</h4>
-                    <p class="text-xs text-gray-500 uppercase mt-2">Outreaches Held</p>
-                </div>
-                <div>
-                    <h4 class="text-4xl font-black text-gray-200">Obangede</h4>
-                    <p class="text-xs text-gray-500 uppercase mt-2">Primary Location</p>
-                </div>
-                <div>
-                    <h4 class="text-4xl font-black text-gray-200">Infinite</h4>
-                    <p class="text-xs text-gray-500 uppercase mt-2">God's Grace</p>
+
+                <div class="flex flex-col md:flex-row justify-center items-center gap-6 bg-white/5 p-6 rounded-xl border border-white/5">
+                    <span class="text-sm font-bold uppercase tracking-widest text-gray-400">Operating In:</span>
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <span class="px-6 py-2 rounded-full border border-green-500/50 text-green-400 font-bold bg-green-500/10 flex items-center gap-2">
+                            <i class="fa-solid fa-location-dot"></i> KOGI STATE
+                        </span>
+                        <span class="px-6 py-2 rounded-full border border-white/30 text-white font-bold bg-white/5 flex items-center gap-2">
+                            <i class="fa-solid fa-city"></i> ABUJA
+                        </span>
+                        <span class="px-6 py-2 rounded-full border border-blue-500/50 text-blue-400 font-bold bg-blue-500/10 flex items-center gap-2">
+                            <i class="fa-solid fa-water"></i> LAGOS STATE
+                        </span>
+                    </div>
                 </div>
             </div>
 
