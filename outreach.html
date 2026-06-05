@@ -67,10 +67,7 @@
                     Join us as we step out into the streets to populate the Kingdom of God. Please register below so we can prepare for your presence.
                 </p>
 
-                <!-- 
-                  Notice the endpoint is embedded, but we intercept it with JS below 
-                  to prevent leaving the page.
-                -->
+                <!-- Form connected to your exact Formspree API endpoint -->
                 <form id="outreachForm" action="https://formspree.io/f/xnjynewn" method="POST" class="space-y-6">
                     
                     <div class="gsap-field">
@@ -102,15 +99,21 @@
                         <p id="locationMessage" class="text-sm text-slate-700 leading-relaxed"></p>
                     </div>
 
-                    <button type="submit" id="submitBtn" class="gsap-field w-full wine-bg text-white font-bold py-4 rounded-lg hover:bg-red-900 transition-all shadow-lg shadow-red-900/20 flex items-center justify-center gap-2 text-lg mt-8">
-                        Register Now <i class="fa-solid fa-arrow-right"></i>
-                    </button>
+                    <!-- 
+                        THE FIX: Removed the GSAP animation so it never disappears. 
+                        Added md:w-auto and flex centering so it looks beautiful on laptops.
+                    -->
+                    <div class="mt-8 flex justify-center">
+                        <button type="submit" id="submitBtn" class="w-full md:w-auto md:px-12 bg-[#800020] text-white font-bold py-4 rounded-full hover:bg-red-900 transition-all shadow-xl shadow-red-900/30 flex items-center justify-center gap-2 text-lg transform hover:-translate-y-1">
+                            Register Now <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
                     
                     <p class="text-center text-xs text-slate-400 mt-4"><i class="fa-solid fa-lock mr-1"></i> Formspree Secured. Your data is safe.</p>
                 </form>
             </div>
 
-            <!-- SUCCESS INTERFACE (Hidden until successful submission) -->
+            <!-- SUCCESS INTERFACE (Hidden until successful API response) -->
             <div id="successContainer" class="hidden text-center py-12">
                 <div class="w-24 h-24 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-5xl mx-auto mb-6 shadow-inner">
                     <i class="fa-solid fa-check"></i>
@@ -124,7 +127,7 @@
                     <p class="text-slate-800 font-medium">"Follow me, and I will make you fishers of men." - Matthew 4:19</p>
                 </div>
                 <br>
-                <a href="index.html" class="inline-flex items-center gap-2 wine-text font-bold hover:text-red-900 transition-colors">
+                <a href="index.html" class="inline-flex items-center gap-2 text-[#800020] font-bold hover:text-red-900 transition-colors">
                     <i class="fa-solid fa-arrow-left"></i> Return to Homepage
                 </a>
             </div>
@@ -134,7 +137,7 @@
 
     <!-- Logic and Animations -->
     <script>
-        // 1. Entrance Animations
+        // 1. Entrance Animations (Button is explicitly excluded so it never breaks)
         gsap.from(".clean-card", { y: 40, opacity: 0, duration: 1, ease: "power3.out", delay: 0.2 });
         gsap.from(".gsap-field", { y: 20, opacity: 0, duration: 0.5, stagger: 0.1, ease: "power2.out", delay: 0.5 });
 
@@ -148,9 +151,9 @@
             locationInfoBox.classList.remove('hidden'); // Show the box
 
             if (selectedValue === 'Lagos') {
-                locationMessage.innerHTML = "<i class='fa-solid fa-map-pin wine-text mr-2'></i><strong>Location Note:</strong> The Lagos outreach will be held actively at the <strong>Ikeja Shopping Mall</strong>.";
+                locationMessage.innerHTML = "<i class='fa-solid fa-map-pin text-[#800020] mr-2'></i><strong>Location Note:</strong> The Lagos outreach will be held actively at the <strong>Ikeja Shopping Mall</strong>.";
             } else if (selectedValue === 'Abuja') {
-                locationMessage.innerHTML = "<i class='fa-solid fa-envelope wine-text mr-2'></i><strong>Location Note:</strong> The exact address for the Abuja outreach will be communicated to you by your team lead shortly.";
+                locationMessage.innerHTML = "<i class='fa-solid fa-envelope text-[#800020] mr-2'></i><strong>Location Note:</strong> The exact address for the Abuja outreach will be communicated to you by your team lead shortly.";
             }
 
             // Animate the box appearing smoothly
@@ -175,12 +178,12 @@
             const formData = new FormData(form);
 
             try {
-                // Send data silently to Formspree
+                // Pulling your specific Formspree API Endpoint silently
                 const response = await fetch(form.action, {
                     method: form.method,
                     body: formData,
                     headers: {
-                        'Accept': 'application/json' // Crucial for Formspree AJAX success
+                        'Accept': 'application/json'
                     }
                 });
 
@@ -193,7 +196,6 @@
                     gsap.from(successContainer, { scale: 0.9, opacity: 0, duration: 0.6, ease: "back.out(1.5)" });
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                 } else {
-                    // If error occurs
                     alert("Oops! There was a problem submitting your form. Please try again.");
                     submitBtn.innerHTML = 'Register Now <i class="fa-solid fa-arrow-right"></i>';
                     submitBtn.disabled = false;
